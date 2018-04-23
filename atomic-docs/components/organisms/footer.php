@@ -1,0 +1,1 @@
+<!-- components/organisms/footer.php -->

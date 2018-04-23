@@ -1,0 +1,9 @@
+/* scss/templates/_overview-blog.scss */
+
+.overview-blog {
+	main {
+		button {
+			@extend .outline-green;
+		}
+	}
+}

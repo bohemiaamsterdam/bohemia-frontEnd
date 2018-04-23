@@ -1,0 +1,44 @@
+/* scss/molecules/_author.scss */
+.author-blog {
+	color: $green;
+
+	border-top: 1px solid #eee;
+
+	.author-wrapper {
+		font-family: $headline-font;
+		font-weight: $light;
+		font-size: $body-size;
+		line-height: $big-lh;
+		font-weight: $regular;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		width: 100%;
+
+		img {
+			width: 20%;
+			max-width: 6.25rem;
+			height: auto;
+			border-radius: 50%;
+		}
+	}
+
+	.author-inner {
+		width: 60%;
+		//padding-bottom: 3.125rem;
+		padding-left: 9%;
+	}
+
+	.author-inner > div:first-child {
+			font-weight: $bold;
+			margin-bottom: 0.46875rem;
+		}
+
+	@media only screen and (min-width: $bp-sm) {
+		margin-right: 1rem;
+		.author-inner {
+			padding-left: 2.5rem;
+
+		}
+	}
+
+}

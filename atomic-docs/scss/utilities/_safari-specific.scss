@@ -1,0 +1,12 @@
+/* scss/utilities/_safari-specific.scss */
+
+body.isSafari {
+	& > footer {
+		@media only screen and (min-width: $bp-md) {
+			margin-top: 0;
+		}
+	}
+	.clip-svg {
+		//display:none;
+	}
+}

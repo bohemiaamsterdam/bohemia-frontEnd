@@ -1,0 +1,1 @@
+<!-- components/templates/front-page.php -->

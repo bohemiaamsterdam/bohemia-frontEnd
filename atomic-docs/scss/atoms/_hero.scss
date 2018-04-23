@@ -1,0 +1,92 @@
+/* scss/atoms/_hero.scss */
+
+.overview-work, .overview-about {
+	.hero > div:first-child {
+		min-height:60vh;
+	}
+	.hero .white-bg {
+		margin-bottom: 0;
+	}
+}
+
+.hero {
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+	background-blend-mode: screen;
+	position:relative;
+
+	h1 {
+		padding-left: 1rem;
+		//padding-top: 0;
+	}
+
+	&>div:first-child {
+		min-height: 50vh;
+		padding-top: 2rem;
+		@include transition(all, 0.3s, ease);
+		@media only screen and (min-height: $bp-sm) {
+			.hero > div:first-child {
+				//min-height: 66vh;
+			}
+		}
+	}
+
+	.white-bg {
+		padding: 1.25rem;
+		margin-bottom: 5rem;
+		font-family: $headline-font;
+		@include fluid-type(font-size, $bp-sm, $bp-lg, $hero-type-min, $hero-type-max);
+		font-weight: $light;
+	}
+
+	svg  {
+		width:100%;
+		//height:30vw;
+	}
+
+	.svg-container {
+		display: block;
+		position: relative;
+		width: 100%;
+		height:100%;
+		vertical-align: bottom;
+		overflow: hidden;
+	}
+
+	.svg-single {
+		position: absolute;
+		display: inline-block;
+		bottom:-1px;
+	}
+
+}
+
+@media only screen and (min-height: $bp-sm) {
+	.hero > div {
+		padding-top: 0;
+	}
+}
+
+.svg-overview {
+	width: 102%;
+	background-image: url(img/hero-poly-down.svg);
+	background-size: cover;
+	height: 0;
+	padding: 0; /* reset */
+	margin: -0.5% -1% 0 -1%;
+	padding-bottom: 12%;
+}
+
+.clip-svg {
+	width: 0;
+	height: 0;
+	position: absolute;
+}
+
+body.ie,
+body.edge {
+	.svg-container {
+		display: none;
+	}
+}

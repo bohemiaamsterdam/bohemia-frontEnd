@@ -1,0 +1,189 @@
+/* scss/atoms/_headings.scss */
+
+//setting paddings for all headings - this will fix the clipping issue coming from the gradient
+
+.single-blog .title, 					//PADDING FIX - H1/title - single posts
+.single-work h1,
+.single-about h1 {
+	margin-top: 2.5rem;
+	@include fluid-type(padding-top, $bp-sm, $bp-lg, $h1-single-pad-min, $h1-single-pad-max);
+	@include fluid-type(padding-bottom, $bp-sm, $bp-lg, $h1-single-pad-min, $h1-single-pad-max);
+	line-height: $small-lh;
+}
+
+.overview-work, 						//PADDING FIX - H1 - overview pages
+.overview-blog,
+.overview-about,
+.overview-clients{
+	h1 {
+		@include fluid-type(padding-top, $bp-sm, $bp-lg, $h1-overview-pad-min, $h1-overview-pad-max);
+		@include fluid-type(padding-bottom, $bp-sm, $bp-lg, $h1-overview-pad-min, $h1-overview-pad-max);
+		line-height: $small-lh;
+
+		@include fluid-type(font-size, $bp-sm, $bp-xlg, $h1-overview-min, $h1-overview-max);
+		//mix-blend-mode:multiply;
+		-ms-word-break: break-word;
+		word-break: break-word;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		hyphens: auto;
+	}
+}
+
+h2 {									//PADDING FIX - H2
+	@include fluid-type(padding-top, $bp-sm, $bp-lg, $h2-overview-pad-min, $h2-overview-pad-max);
+	@include fluid-type(padding-bottom, $bp-sm, $bp-lg, $h2-overview-pad-min, $h2-overview-pad-max);
+	line-height: $small-lh;
+	-ms-word-break: break-word;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+
+h3 {									//PADDING FIX - H3
+	padding: $h3-pad 0;
+	line-height: $big-lh;
+}
+
+h4 {									//PADDING FIX - H4
+	padding: $h4-pad 0;
+	line-height: $small-lh;
+}
+
+
+///////////
+
+
+h1, h2, h3, h4, h5, h6, .title {
+	font-family: $headline-font;
+	font-weight: $light;
+
+	@media only screen and (min-width: $bp-md) {
+		font-weight: $thin;
+	}
+
+}
+
+//-------------------------------THIS IS NEW----------------------------------//
+
+.icon-text{
+	h6{
+		font-size: $size11 !important;
+		line-height: 1.2;
+		text-align: left;
+	}
+}
+
+//-------------------------------HERE IT ENDS----------------------------------//
+
+// Remove gradient on IE
+body.ie {
+	&.single-blog,
+	&.overview-blog {
+		h1, h2, h3, h4, h5, h6, .title {
+			background:none;
+			color:$green;
+		}
+	}
+	&.single-work,
+	&.single-about {
+		h1, h2, h3, h4, h5, h6, .title {
+			background:none;
+			color:$red;
+		}
+		.post-item {
+			h3 {
+				color:$white;
+			}
+		}
+	}
+	&.overview-work,
+	&.overview-about,
+	&.overview-clients  {
+		&>.hero {
+			h1, h2, h3, h4, h5, h6, .title {
+				background:none;
+				color:$red;
+			}
+		}
+	}
+}
+
+.single-blog,
+.overview-blog {								// blue-green gradient - Headlines
+	h1, h2, h3, h4, h5, h6, .title {
+		@include linear-gradient-text(45deg,$blue,$green);
+	}
+}
+
+.single-work,
+.single-about,
+.overview-work,
+.overview-about,
+.overview-clients  {							// blue-red gradient - Headlines
+	h1, h2, h3, h4, h5, h6, .title {
+		@include linear-gradient-text(45deg,$blue,$red);
+	}
+}
+
+
+
+.single-blog h1 { 					//the small SEO in single-blog
+	font-weight: $bold;
+	font-size: $body-size;
+	line-height: $intro-lh;
+	color: $green;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
+
+.single-blog .title, 				//H1 in single-work and single-about, and the Title in the single-blog
+.single-work h1,
+.single-about h1 {
+	@include fluid-type(font-size, 12.5rem, $bp-xxxlg, 3.5rem, 6rem);
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+
+
+.single-blog,					//H2 in single posts
+.single-work,
+.single-about {
+	h2 {
+		@include fluid-type(font-size, 12.5rem, $bp-xxxlg, 3rem, 5rem);
+		padding-top: $h2-pad;
+		padding-bottom: $h2-pad;
+	}
+}
+
+/*.overview-work, 					//H2 (post item) - overview pages
+.overview-blog,
+.overview-about {
+	.post-item h2 {
+		@include fluid-type(font-size, $bp-sm, $bp-xlg, $h2-overview-min, $h2-overview-max);
+	}
+}*/
+
+h3 {
+	font-weight: $thin;
+	font-size: 2.5rem;
+	line-height: $big-lh;
+}
+
+/*.single-blog,						//H3 (post item) - single posts
+.single-work,
+.single-about {
+	.post-item h3 {
+		@include fluid-type(font-size, $bp-md, $bp-xlg, $h2-overview-min, $h2-overview-max);
+	}
+}*/
+
+h4 {
+	font-size: $h4-single;
+}

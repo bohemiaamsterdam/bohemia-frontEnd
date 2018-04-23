@@ -1,0 +1,39 @@
+/* scss/molecules/_gallery.scss */
+
+.gallery { // Masonary container
+	margin-top: 4.375rem;
+
+	img {
+		//width:100%;
+		//height:auto;
+		//border:0 !important;
+	}
+
+ 	.gallery-item {
+		width:100%;
+ 		margin-bottom:1.25rem;
+		//display:inline-block;
+
+		@media only screen and (min-width:$bp-sm) {
+			width:calc(100% / 2 - 1.25rem);
+		}
+
+		@media only screen and (min-width:$bp-md) {
+			width:calc(100% / 3 - 1.25rem);
+		}
+
+		img {
+			width:100%;
+			height:auto;
+			border:0 !important;
+		}
+ 	}
+
+	dl.big-img {
+		position: absolute;
+		width:100%;
+		height:auto;
+	}
+
+
+}

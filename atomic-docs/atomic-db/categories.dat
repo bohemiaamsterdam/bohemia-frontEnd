@@ -1,0 +1,22 @@
+[
+    {
+        "category": "utilities",
+        "order": 0
+    },
+    {
+        "category": "atoms",
+        "order": 1
+    },
+    {
+        "category": "molecules",
+        "order": 2
+    },
+    {
+        "category": "organisms",
+        "order": 3
+    },
+    {
+        "category": "templates",
+        "order": 4
+    }
+]

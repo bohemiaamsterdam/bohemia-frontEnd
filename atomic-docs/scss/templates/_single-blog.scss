@@ -1,0 +1,15 @@
+/* scss/templates/_single-blog.scss */
+
+.single-blog {
+	time {
+		color: $green;
+		background-image: url(img/dot-green.svg);
+	}
+	.client {
+		color: $green;
+	}
+
+	a {
+		color: $green;
+	}
+}

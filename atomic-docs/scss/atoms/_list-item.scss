@@ -1,0 +1,32 @@
+/* scss/atoms/_list-item.scss */
+
+section.content ul, section.content ol {
+	margin-bottom:2.5rem;
+	padding-left: 1.25rem;
+}
+
+section.content ul {
+	list-style: none;
+
+	li {
+	    position: relative;
+	}
+
+	li:before {
+	    /*
+	    The desired width gets defined in two places: The element width, and background size.
+	    The height only gets defined once, in background size.
+	    */
+	    position: absolute;
+	    display: block;
+	    content: '\2022'; /* bullet point, for screen readers */
+	    text-indent: -999999px; /* move the bullet point out of sight */
+	    left: -1rem;
+	    width: 0.375rem; /* desired width of the image */
+	    height: 1.25rem; /* unrelated to image height; this is so it gets snipped */
+	    background-repeat: no-repeat;
+	    background-image: url('img/dot-blue.svg');
+	    background-size: 0.375rem 0.375rem;
+	    background-position: 0 0.75rem;
+	}
+}

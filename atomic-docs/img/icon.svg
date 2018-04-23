@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="8614 585 75 75">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Artboard_1);
+      }
+
+      .cls-2, .cls-3, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke: #0046b4;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 1.577px;
+      }
+
+      .cls-3, .cls-4 {
+        stroke: rgba(0,70,180,0.2);
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke-width: 1.58px;
+      }
+    </style>
+    <clipPath id="clip-Artboard_1">
+      <rect x="8614" y="585" width="75" height="75"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" class="cls-1">
+    <rect class="cls-5" x="8614" y="585" width="75" height="75"/>
+    <g id="Group_194" data-name="Group 194" transform="translate(8616 587)">
+      <circle id="Ellipse_14" data-name="Ellipse 14" class="cls-2" cx="28.5" cy="28.5" r="28.5" transform="translate(5.7 6)"/>
+      <line id="Line_35" data-name="Line 35" class="cls-2" y2="11" transform="translate(34.2)"/>
+      <line id="Line_36" data-name="Line 36" class="cls-2" y2="11" transform="translate(34.2 57.5)"/>
+      <line id="Line_37" data-name="Line 37" class="cls-2" x1="11" transform="translate(57.5 34.2)"/>
+      <line id="Line_38" data-name="Line 38" class="cls-2" x1="11" transform="translate(0 34.2)"/>
+      <g id="Group_156" data-name="Group 156" transform="translate(-1308 -598)">
+        <line id="Line_51" data-name="Line 51" class="cls-3" y2="11" transform="translate(1345.199 601)"/>
+        <line id="Line_52" data-name="Line 52" class="cls-3" y2="11" transform="translate(1345.199 658.5)"/>
+        <line id="Line_53" data-name="Line 53" class="cls-3" x1="11" transform="translate(1368.5 635.2)"/>
+        <line id="Line_54" data-name="Line 54" class="cls-3" x1="11" transform="translate(1311 635.2)"/>
+        <circle id="Ellipse_20" data-name="Ellipse 20" class="cls-4" cx="28.5" cy="28.5" r="28.5" transform="translate(1316.699 607)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,54 @@
+/* scss/molecules/_quotes.scss */
+
+// use the classes .blue, .red, .green to style
+
+blockquote {
+	font-family: $headline-font;
+	font-weight: $light;
+	font-size: $h2-single;
+	line-height: $big-lh;
+	margin: 3.75rem auto;
+
+	.author-wrapper {
+		font-size: $small-type;
+		font-weight: $regular;
+		margin-top: 1.875rem;
+
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	.author-inner {
+		padding-left: 1.875rem;
+		width: 70%;
+	}
+
+	.author-inner > div:first-child {
+			font-weight: $bold;
+			margin-bottom: 0.46875rem;
+		}
+
+}
+
+blockquote > div.row  {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+//change color based on page
+.single-work,
+.single-about,
+.overview-work,
+.overview-about,
+.overview-clients {
+	blockquote {
+		color: $red;
+	}
+}
+.single-blog,
+.overview-blog {
+	blockquote {
+		color: $green;
+	}
+}

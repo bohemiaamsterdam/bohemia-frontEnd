@@ -1,0 +1,9 @@
+/* scss/templates/_overview-work.scss */
+
+
+.overview-work main, .work-bg {
+	@include linear-gradient-img (45deg,$blue,$red);
+	overflow: hidden;
+	//width:100%;
+	display:block;
+}

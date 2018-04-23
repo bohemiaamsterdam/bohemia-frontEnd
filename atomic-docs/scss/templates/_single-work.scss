@@ -1,0 +1,22 @@
+/* scss/templates/_single-work.scss */
+
+.single-work {
+	time {
+		color: $red;
+		background-image: url(img/dot-red.svg);
+	}
+	.client {
+		color: $red;
+	}
+
+	a {
+		color: $red;
+	}
+	footer.tags li {
+		color:$red;
+		@include transition(all,0.3s,ease);
+		&:hover {
+			color:$blue;
+		}
+	}
+}

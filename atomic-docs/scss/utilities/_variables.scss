@@ -1,0 +1,128 @@
+/* scss/utilities/_variables.scss */
+
+// COLORS
+	$blue: 	#0046b4; 	$blue-trans: 	rgba(0,70,180,0.7);
+	$red: 	#fa5f69;	$red-trans: 	rgba(250,95,105,0.7);
+	$green: #46beaf;	$green-trans: 	rgba(70,190,175,0.7);
+	$violet-trans: #8c548a;
+	$white: #ffffff;	$blue-red-gradient: linear-gradient(90deg, rgba(140,84,138,1) 0%, rgba(250,95,105,1) 100%);
+	$grey:  #9ca8b7;
+
+// GRID - the media queries take only 16px as base font (from the browser)
+
+	//Chrome REM as *16 all the time
+	$bp-sm: 48rem;  // 48 * 16 = 768px
+	$bp-md: 64rem;  // 64 * 16 = 1024px
+	$bp-lg: 75rem;  // 75 * 16 = 1200px
+	$bp-xlg: 100rem; // 100 * 16 = 1600px
+	$bp-xxlg: 120rem; // 120 * 16 = 1920px
+	$bp-xxxlg: 160rem; // 160 * 16 = 2560px
+
+// FONTS
+	$base-font-size: 100%;
+
+	// Family
+	//$headline-font: "brandon-grotesque", Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	$body-font: 'Work Sans', Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	$headline-font: 'Work Sans', Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	//$body-font: "livory", Times, "Times New Roman", serif;
+	$extra-font: 'Alegreya', Times, "Times New Roman", serif;
+
+//
+
+	// Weight
+	$thin: 100;
+	$light: 200;
+	$regular: 300;
+	$bold: 700;
+
+	// Line-heights
+	$big-lh: 1;					  //
+	$small-lh: 1;					//
+	$intro-lh: 1.4;					//
+	$body-lh: 1.5;					//
+
+	$pad-multiplier: 0.43;			// padding fix for the clipping
+
+	// Sizes
+	$size1: 1.125rem; 	//18px
+	$size2: 1.25rem; 		//20px
+	$size3: 1.4375rem; 	//23px
+	$size4: 1.625rem; 	//26px
+	$size5: 2.5rem; 		//40px
+	$size6: 3.5rem; 		//56px
+	$size7: 4rem; 			//68px
+	$size8: 6.25rem;	 	//100px
+	$size9: 10.625rem; 	//170px
+	$size10: 5.625rem; //90px
+	$size11: 1.8125rem; //29px
+
+
+		// header
+		$header-type-min: 		$size2;
+		$header-type-max: 		$size3;
+
+		//menu
+		$menu-type-min: 		$size5;
+		$menu-type-max: 		$size6;
+
+		//headlines
+		$h1-single-min:			$size7;
+		$h1-single-max:			$size8;
+
+		//headlines
+		$h2-single-min:			3rem;
+		$h2-single-max:			$size7;
+
+		//post-item-title
+		$h1-overview-min:		$size8;
+		$h1-overview-max:		$size9;
+
+		//post-item-title
+		$h2-overview-min:		$size7;
+		$h2-overview-max:		$size8;
+
+		// hero
+		$hero-type-min: 		$size3;
+		$hero-type-max: 		$size4;
+
+		//front-page
+		$h1-frontpage-min:		3.5rem;
+		$h1-frontpage-max:		11rem;
+
+
+
+		$small-type: $size1;		// blockquote author, button on mobile
+		$sidebar-type: $size2;		// sidebar, date
+		$header-type: $size4;		// phone, logo
+		$footer-type: $size2;		// footer
+		$body-size: $size3;			// body
+		$h2-single: $size6; 		// H2, blockquote,
+		$h3-single: $size5;			// H3
+		$h4-single: $size5;			// H4
+		$intro-single: 1.8rem;		// intro
+		$form-label-type: $size2;	// form labels
+		$form-input-type: $size3;	// form input
+
+	// Paddings
+	$h1-single-pad-min: $h1-single-min * $pad-multiplier;
+	$h1-single-pad-max: $h1-single-max * $pad-multiplier;
+
+	$h1-overview-pad-min: $h1-overview-min * $pad-multiplier;
+	$h1-overview-pad-max: $h1-overview-max * $pad-multiplier;
+
+	$h2-overview-pad-min: $h2-overview-min * $pad-multiplier;
+	$h2-overview-pad-max: $h2-overview-max * $pad-multiplier;
+
+	$h2-pad: $h2-single * $pad-multiplier;
+	$h3-pad: $h3-single * $pad-multiplier;
+	$h4-pad: $h4-single * $pad-multiplier;
+
+	//-------------------------------THIS IS NEW----------------------------------//
+
+	//buttons round corners
+	$btn-corner: 11px;
+	$btn-height: 14.15rem; //70px
+
+		//-------------------------------END OF NEW----------------------------------//

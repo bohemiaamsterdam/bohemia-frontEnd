@@ -1,0 +1,1 @@
+<!-- components/organisms/front-two.php -->

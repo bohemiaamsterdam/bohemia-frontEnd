@@ -1,0 +1,1 @@
+<!-- components/atoms/images.php -->

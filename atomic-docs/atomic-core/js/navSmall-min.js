@@ -1,0 +1,1 @@
+var navOpen=[{elements:$(".atoms-side"),properties:{top:"0"},options:{duration:200}}],navClose=[{elements:$(".atoms-side"),properties:{top:"-100%"},options:{duration:200}}];$(".atoms-side_show-small").on("click",function(e){"0px"==$(".atoms-side").css("top")?$.Velocity.RunSequence(navClose):$.Velocity.RunSequence(navOpen)});

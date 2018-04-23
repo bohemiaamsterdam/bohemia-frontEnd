@@ -1,0 +1,194 @@
+/* scss/utilities/_mixins.scss */
+
+//- Mixin: Fluid Type
+///
+/// Magic calc + vh to allow text to be fluid between minimum
+/// and maximum breakpoints.
+///
+/// @group typography
+/// @param {variable} $prop - Proprierty
+/// @param {variable} $lower-range - Stop scaling smaller at this screen resolution
+/// @param {variable} $upper-range - Stop scaling larger at this screen resolution
+/// @param {variable} $min-size - Minimum size
+/// @param {variable} $max-size - Maximum size
+/// @example
+///   div {
+///     @include fluid-type(height, 20px, 48px);
+///   }
+/// @site http://madebymike.com.au/writing/precise-control-responsive-typography/
+
+// Mixin: Fluid Type based on the vw
+@mixin fluid-type($prop, $lower-range, $upper-range, $min-size, $max-size) {
+
+  $lower-range: convert(strip-unit($lower-range), rem, px);
+  $upper-range: convert(strip-unit($upper-range), rem, px);
+  $min-size: convert(strip-unit($min-size), rem, px);
+  $max-size: convert(strip-unit($max-size), rem, px);
+
+  #{$prop}: calc(#{$min-size} + #{(($max-size / ($max-size * 0 + 1)) - ($min-size / ($min-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+
+  @media screen and (max-width: $lower-range) {
+    #{$prop}: convert(strip-unit($min-size), px, rem);
+  }
+  @media screen and (min-width: $upper-range){
+    #{$prop}: convert(strip-unit($max-size), px, rem);
+  }
+}
+
+// Mixin: Fluid Type based on the vh
+@mixin fluid-type-vh($prop, $lower-range, $upper-range, $min-size, $max-size) {
+
+  #{$prop}: calc(#{$min-size} + #{(($max-size / ($max-size * 0 + 1)) - ($min-size / ($min-size * 0 + 1)))} * ( (100vh - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+
+  @media screen and (max-width: $lower-range) {
+    #{$prop}: $min-size;
+  }
+  @media screen and (min-width: $upper-range){
+    #{$prop}: $max-size;
+  }
+}
+
+// Convert units
+@function convert($value, $currentUnit, $convertUnit){
+   @if $currentUnit == px{
+
+      @if $convertUnit == rem{
+        @return $value / 16 + 0rem;
+      }
+      @else if $convertUnit == percent{
+        @return percentage($value / 16);
+      }
+
+   }@else if $currentUnit == rem{
+
+      @if $convertUnit == px{
+        @return $value * 16 + 0px;
+      }
+      @else if $convertUnit == percent{
+        @return percentage($value);
+      }
+
+   }@else if $currentUnit == percent{
+
+      @if $convertUnit == px{
+        @return $value * 16 / 100 + 0px;
+      }
+      @else if $convertUnit == rem{
+        @return $value / 100 + 0em;
+      }
+
+   }@else if $currentUnit == pts{
+
+      @if $convertUnit == px{
+        @return $value * 1.3333 +0px;
+      }
+      @else if $convertUnit == rem{
+        @return $value / 12 + 0rem;
+      }
+      @else if $convertUnit == percent{
+        @return percentage($value / 12)
+      }
+
+   }
+}
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+// linear gradient - text
+@mixin linear-gradient-text($direction, $colors...) {
+	background: -webkit-linear-gradient($direction, $colors);
+	background: -moz-linear-gradient($direction, $colors);
+	background: -o-linear-gradient($direction, $colors);
+	background: -ms-linear-gradient($direction, $colors);
+	background: linear-gradient($direction, $colors);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
+	display: inline-block;
+}
+
+//REMOVE linear gradient - text
+@mixin remove-gradient-text() {
+	background: none;
+	-webkit-background-clip: border-box;
+	background-clip: border-box;
+	-webkit-text-fill-color: currentcolor;
+	text-fill-color: currentcolor;
+	//display: inline-block;
+}
+
+// linear gradient - img
+@mixin linear-gradient-img($direction, $colors...) {
+	background-image: -webkit-linear-gradient($direction, $colors);
+	background-image: -moz-linear-gradient($direction, $colors);
+	background-image: -o-linear-gradient($direction, $colors);
+	background-image: -ms-linear-gradient($direction, $colors);
+	background-image: linear-gradient($direction, $colors);
+}
+
+// linear gradient - border
+@mixin linear-gradient-border($direction, $colors...) {
+    -webkit-border-image: -webkit-linear-gradient($direction, $colors);
+    -moz-border-image: -moz-linear-gradient($direction, $colors);
+    -o-border-image: -o-linear-gradient($direction, $colors);
+    border-image: linear-gradient($direction, $colors);
+	border-image-slice: 1
+}
+
+
+
+/* transition syntax
+		<name>
+		<duration>
+		<timing-function>
+		<delay> */
+
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+/* animation:
+		<name>
+		<duration>
+		<timing-function>
+		<delay>
+		<iteration-count>
+		<direction>
+		<fill-mode> */
+
+@mixin animation ($args...) {
+	-webkit-animation: $args;
+	-moz-animation: $args;
+	-o-animation: $args;
+	animation: $args;
+}
+
+
+/* transform:
+		<name>
+		<duration>
+		<timing-function>
+		<delay>
+		<iteration-count>
+		<direction>
+		<fill-mode> */
+
+@mixin transform ($args...) {
+	-webkit-transform: $args;
+	-moz-transform: $args;
+	-o-transform: $args;
+  -ms-transform: $args;
+	transform: $args;
+}

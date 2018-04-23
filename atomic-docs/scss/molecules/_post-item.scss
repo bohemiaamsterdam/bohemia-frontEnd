@@ -1,0 +1,251 @@
+/* scss/molecules/_post-item.scss */
+
+//
+// General post-item
+//
+.post-item {
+	display: block;
+	height: 34rem;
+	@include fluid-type(height, $bp-md, $bp-xxlg, 37rem, 43rem);
+	padding: 0;
+	margin: 0;
+	color: $white;
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+	transition: all .3s ease-in-out;
+
+	@media only screen and (min-width: $bp-xxlg) {
+		height:46rem;
+	}
+
+	&:hover {
+		outline: 0;
+	}
+
+	&:hover img {
+		opacity:0.2;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+		opacity: 0;
+		transition: all .3s ease-in-out;
+	}
+
+	.post-item-inner {
+		@include fluid-type(padding-left, $bp-md, $bp-xlg, 1rem, 3rem);
+		@include fluid-type(bottom, $bp-md, $bp-xlg, 2rem, 3rem);
+		position: absolute;
+		word-wrap: break-word;
+		width: 100%;
+
+		// Titles inside the post-items
+		h2, h3 {
+			// Size
+			@include fluid-type(font-size, 12.5rem, $bp-xxxlg, 2.6rem, 5rem);
+			line-height: $small-lh;
+
+			//Padding fix
+			@include fluid-type(padding-top, $bp-sm, $bp-lg, $h2-overview-pad-min, $h2-overview-pad-max);
+			@include fluid-type(padding-bottom, $bp-sm, $bp-lg, $h2-overview-pad-min, $h2-overview-pad-max);
+
+			//Hyphens for mobile
+			-ms-word-break: break-word;
+			word-break: break-word;
+			-webkit-hyphens: auto;
+			-moz-hyphens: auto;
+			-ms-hyphens: auto;
+			hyphens: auto;
+			@media only screen and (min-width:$bp-xxlg) {
+				-ms-word-break: normal;
+				word-break: normal;
+				-webkit-hyphens:none;
+				-moz-hyphens:none;
+				-ms-hyphens:none;
+				hyphens:none;
+			}
+
+			//Transition (hover)
+			@include transition(all,0.3s,ease);
+
+		}
+
+		.tags, .quote {
+			margin-top:0;
+			@include fluid-type(margin-bottom, $bp-sm, $bp-xxlg, 1.25rem, 3.25rem);
+			ul {
+				margin-left:0;
+			}
+		}
+
+	}
+
+}
+
+
+//
+// Blog post-item
+//
+.single-blog .post-item,
+.overview-blog .post-item{
+
+	background-color: $white;
+	//static
+	&>img {
+		mix-blend-mode: screen;
+	}
+	span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include linear-gradient-img (45deg,$blue,$green);
+		opacity: 0;
+		@include transition(all,0.3s,ease);
+	}
+
+ 	h2, h3 {
+		@include linear-gradient-text(45deg,$blue,$green);
+	}
+
+	.tags li {
+		color:$grey;
+		@include transition(all,0.3s,ease);
+	}
+
+	.author {
+		color:$green;
+		@include transition(all,0.3s,ease);
+
+		.author-wrapper {
+			font-family: $headline-font;
+			font-size: $small-type;
+			font-weight: $regular;
+
+			img {
+				width: 3.5rem;
+				height: auto;
+				opacity: 1;
+				border-radius: 50%;
+				margin-left: 1rem;
+
+			}
+		}
+
+		.author-inner {
+			padding-left: 2rem;
+
+			&>div:first-child {
+				font-weight: $bold;
+				//margin-bottom: 0.75rem;
+			}
+			&>div:nth-child(2) {
+				margin-top: -0.15rem;
+				margin-bottom: -0.15rem;
+			}
+		}
+	}
+
+	// on hover
+	&:hover {
+
+		img {
+			opacity:.3;
+		}
+		span {
+			opacity: 1;
+		}
+
+		h2, h3 {
+			color:$white;
+			@include remove-gradient-text();
+		}
+
+		.client {
+			color:$white;
+		}
+		.tags li {
+			color:$white;
+		}
+
+		.author {
+			color:$white;
+		}
+	}
+}
+
+//
+// About post-item
+//
+.single-about .post-item,
+.overview-about .post-item {
+	//static
+	&>img {
+		opacity: .3;
+	}
+	span {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include linear-gradient-img (45deg,$blue,$red);
+		opacity: .6;
+		transition: all .3s ease-in-out;
+	}
+
+ 	h2, h3 {
+		color: $white;
+		@include remove-gradient-text();
+	}
+
+	.tags li {
+		color:$grey;
+		transition: all .3s ease-in-out;
+	}
+
+	.quote {
+		color: $white;
+		font-style: italic;
+	}
+
+	.position {
+		color:$white;
+		transition: all .3s ease-in-out;
+		font-family: $headline-font;
+		font-size: $body-size;
+		font-weight: $bold;
+	}
+
+	// on hover
+	&:hover {
+		span {
+			opacity: 1;
+		}
+		img {
+			opacity: 0.6;
+		}
+	}
+
+}
+
+//
+// Work post-item
+//
+.single-work .post-item,
+.overview-work .post-item {
+
+	h2, h3 {
+		color: $white;
+		@include remove-gradient-text();
+	}
+
+	.client {
+		color:$white;
+	}
+}

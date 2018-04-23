@@ -1,0 +1,158 @@
+
+$color-bg: #fff; //background for the demo
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+
+/* =====================================================
+   Some defaults across all toggle demos
+   ===================================================== */
+
+.toggle {
+	display: block;
+	text-align: left;
+	margin-top: 40px;
+  user-select: none;
+}
+	.toggle--checkbox {
+    display: none;
+	}
+	.toggle--btn {
+		float:left;
+
+		font-size: 1.4em;
+
+		transition: all 350ms ease-in;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.toggle--btn,
+	.toggle--checkbox,
+	.toggle--feature {
+		&,
+		&:before,
+		&:after {
+			transition: all 250ms ease-in;
+		}
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+		}
+	}
+
+	/* ==================================================
+	   Like specific styling
+	   ================================================== */
+
+  $toggleHeight: 70px; //70
+	$toggleWidth: 125px; //125
+	$borderWidth: 5px; // 5
+	$toggleBtnRadius: $toggleHeight - 14px;
+
+  $bgColor--sad:  #e25d5d;
+	$borderColor--sad: #e25d5d;
+  $toggleBtnRadius: $toggleHeight - 14px;
+
+	$bgColor--happy: #3498db;
+	$borderColor--happy: #3498db;
+
+	$emojiWidth: 36px;
+	$emojiBgColor: #f2dd68;
+	$emojiBorderColor: #f2dd68;
+	$emojiColor: #995710;
+	$emojiColorAlt: #d8aa2b;
+
+	$toggleFeaturePosition--sad: ($toggleBtnRadius/2) - 14;
+	$toggleFeaturePosition--happy: 53px;
+
+	.toggle--like {
+		position: relative;
+
+		.toggle--btn {
+      position: relative;
+			height: $toggleHeight;
+			width: $toggleWidth;
+			border-radius: $toggleHeight;
+			border: $borderWidth solid $borderColor--sad;
+			background-color: $bgColor--sad;
+
+			//toggle button
+			&:before {
+				background-color: $emojiBgColor;
+				border: $borderWidth solid $emojiBorderColor;
+				position: absolute;
+				top: 2px;
+				left: 4px;
+				width: $toggleBtnRadius;
+				height: $toggleBtnRadius;
+				border-radius: 50%;
+			}
+		}
+
+		.toggle--feature {
+			position: absolute;
+			left: 14px;
+			top: 32%;
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			background-color: $emojiColor;
+			box-shadow: ($emojiWidth - 8) 0 0 0 $emojiColor;
+
+			&:before {
+				position: absolute;
+				left: 0;
+				top: 11px;
+				width: $emojiWidth;
+				height: 17px;
+				background-color: $emojiColor;
+
+				border-radius: $emojiWidth $emojiWidth 0 0;
+			}
+			&:after {
+				position: absolute;
+				left: 9px;
+				top: 21px;
+				width: 17px;
+				height: 7px;
+				background-color: $emojiColorAlt;
+
+				border-radius: 17px 17px 0 0;
+			}
+
+		}
+
+		//what happens once checkbox is checked
+		.toggle--checkbox:checked {
+			 & + .toggle--btn {
+				background-color: $bgColor--happy;
+				border: $borderWidth solid $borderColor--happy;
+
+				//toggle button
+				&:before {
+					transform: translate($toggleWidth - ($toggleBtnRadius) - ($borderWidth * 2) - 8px, 0);
+				}
+
+				& .toggle--feature {
+					transform: translate($toggleFeaturePosition--happy, 0);
+
+					&:before {
+						border-radius: 0 0 $emojiWidth $emojiWidth;
+						top: 11px;
+					}
+					&:after {
+						top: 21px;
+						border-radius: 50%/50%;
+					}
+				}
+			}
+		}
+}

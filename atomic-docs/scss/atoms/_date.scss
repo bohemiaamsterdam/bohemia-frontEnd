@@ -1,0 +1,14 @@
+/* scss/atoms/_date.scss */
+
+time {
+	font-family: $headline-font;
+	font-weight: $light;
+	font-size: $sidebar-type;
+
+	background-image: url(img/dot-blue.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0.625rem;
+    background-size: 0.375rem 0.375rem;
+    padding-left: 1.125rem;
+	margin-left: 0.3125rem;
+}

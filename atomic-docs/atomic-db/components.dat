@@ -1,0 +1,458 @@
+[
+    {
+        "component": "variables",
+        "category": "utilities",
+        "description": "All variables such as fonts, colors etc.",
+        "backgroundColor": "",
+        "order": 0,
+        "has_js": "false"
+    },
+    {
+        "component": "reset",
+        "category": "utilities",
+        "description": "The reset styles based on Eric Meyer's Reset",
+        "backgroundColor": "",
+        "order": 1,
+        "has_js": "false"
+    },
+    {
+        "component": "media_queries",
+        "category": "utilities",
+        "description": "Media queries",
+        "backgroundColor": "",
+        "order": 6,
+        "has_js": "false"
+    },
+    {
+        "component": "grid",
+        "category": "utilities",
+        "description": "Custom grid taken from the HTML5 Boilerplate",
+        "backgroundColor": "",
+        "order": 4,
+        "has_js": "false"
+    },
+    {
+        "component": "helper",
+        "category": "utilities",
+        "description": "Small things to help us make the flow faster",
+        "backgroundColor": "",
+        "order": 5,
+        "has_js": "false"
+    },
+    {
+        "component": "print",
+        "category": "utilities",
+        "description": "The print styles",
+        "backgroundColor": "",
+        "order": 7,
+        "has_js": "false"
+    },
+    {
+        "component": "base",
+        "category": "utilities",
+        "description": "The basis such as <html> and <body>",
+        "backgroundColor": "",
+        "order": 3,
+        "has_js": "false"
+    },
+    {
+        "component": "headings",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": 4,
+        "has_js": "false"
+    },
+    {
+        "component": "buttons",
+        "category": "atoms",
+        "description": "All the buttons",
+        "backgroundColor": "",
+        "order": 1,
+        "has_js": "false"
+    },
+    {
+        "component": "inputs",
+        "category": "atoms",
+        "description": "All the inputs",
+        "backgroundColor": "",
+        "order": 3,
+        "has_js": "false"
+    },
+    {
+        "component": "gallery",
+        "category": "molecules",
+        "description": "The gallery in the single pages",
+        "backgroundColor": "",
+        "order": 0,
+        "has_js": "false"
+    },
+    {
+        "component": "quotes",
+        "category": "molecules",
+        "description": "The style for all the quote types",
+        "backgroundColor": "",
+        "order": 4,
+        "has_js": "false"
+    },
+    {
+        "component": "share-widget",
+        "category": "molecules",
+        "description": "The share widget in the sidebar",
+        "backgroundColor": "",
+        "order": 5,
+        "has_js": "false"
+    },
+    {
+        "component": "footer",
+        "category": "organisms",
+        "description": "The footer style, without the next\/previous",
+        "backgroundColor": "",
+        "order": 0,
+        "has_js": "false"
+    },
+    {
+        "component": "next_prev",
+        "category": "organisms",
+        "description": "The next and previous sections, based on the post-item molecules",
+        "backgroundColor": "",
+        "order": 2,
+        "has_js": "false"
+    },
+    {
+        "component": "post-item",
+        "category": "molecules",
+        "description": "Each of the item posts we have in the overview",
+        "backgroundColor": "",
+        "order": 3,
+        "has_js": "false"
+    },
+    {
+        "component": "mixins",
+        "category": "utilities",
+        "description": "All the mixins",
+        "backgroundColor": "",
+        "order": 2,
+        "has_js": "false"
+    },
+    {
+        "component": "single-blog",
+        "category": "templates",
+        "description": "",
+        "backgroundColor": "#78b9aa",
+        "order": -17,
+        "has_js": "false"
+    },
+    {
+        "component": "hamburger",
+        "category": "atoms",
+        "description": "The hamburger menu",
+        "backgroundColor": "",
+        "order": 2,
+        "has_js": "false"
+    },
+    {
+        "component": "menu",
+        "category": "molecules",
+        "description": "The side menu",
+        "backgroundColor": "",
+        "order": 2,
+        "has_js": "false"
+    },
+    {
+        "component": "images",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": 0,
+        "has_js": "false"
+    },
+    {
+        "component": "hero",
+        "category": "atoms",
+        "description": "The hero image in the single pages",
+        "backgroundColor": "",
+        "order": -22,
+        "has_js": "false"
+    },
+    {
+        "component": "sidebar",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -23,
+        "has_js": "false"
+    },
+    {
+        "component": "single-work",
+        "category": "templates",
+        "description": "The template for the Single Work posts.",
+        "backgroundColor": "",
+        "order": -24,
+        "has_js": "false"
+    },
+    {
+        "component": "tags",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -25,
+        "has_js": "false"
+    },
+    {
+        "component": "overview-work",
+        "category": "templates",
+        "description": "",
+        "backgroundColor": "",
+        "order": -26,
+        "has_js": "false"
+    },
+    {
+        "component": "tree",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -27,
+        "has_js": "false"
+    },
+    {
+        "component": "client",
+        "category": "atoms",
+        "description": "The client's name",
+        "backgroundColor": "",
+        "order": -28,
+        "has_js": "false"
+    },
+    {
+        "component": "date",
+        "category": "atoms",
+        "description": "The date in the single pages",
+        "backgroundColor": "",
+        "order": -29,
+        "has_js": "false"
+    },
+    {
+        "component": "caption",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -28,
+        "has_js": "false"
+    },
+    {
+        "component": "load-button",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -29,
+        "has_js": "false"
+    },
+    {
+        "component": "intro",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -30,
+        "has_js": "false"
+    },
+    {
+        "component": "single",
+        "category": "templates",
+        "description": "",
+        "backgroundColor": "",
+        "order": -31,
+        "has_js": "false"
+    },
+    {
+        "component": "author",
+        "category": "molecules",
+        "description": "",
+        "backgroundColor": "",
+        "order": -32,
+        "has_js": "false"
+    },
+    {
+        "component": "form",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -33,
+        "has_js": "false"
+    },
+    {
+        "component": "overview-clients",
+        "category": "templates",
+        "description": "",
+        "backgroundColor": "",
+        "order": -34,
+        "has_js": "false"
+    },
+    {
+        "component": "front-page",
+        "category": "templates",
+        "description": "",
+        "backgroundColor": "",
+        "order": -35,
+        "has_js": "false"
+    },
+    {
+        "component": "front-one",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -36,
+        "has_js": "false"
+    },
+    {
+        "component": "front-two",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -37,
+        "has_js": "false"
+    },
+    {
+        "component": "front-three",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -38,
+        "has_js": "false"
+    },
+    {
+        "component": "front-four",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -39,
+        "has_js": "false"
+    },
+    {
+        "component": "front-five",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -40,
+        "has_js": "false"
+    },
+    {
+        "component": "front-zero",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -41,
+        "has_js": "false"
+    },
+    {
+        "component": "side-tags",
+        "category": "organisms",
+        "description": "The tags sidebar in the Home and Tag overview pages.",
+        "backgroundColor": "",
+        "order": -42,
+        "has_js": "false"
+    },
+    {
+        "component": "videos",
+        "category": "atoms",
+        "description": "Iframe videos and embedded map",
+        "backgroundColor": "",
+        "order": -43,
+        "has_js": "false"
+    },
+    {
+        "component": "list-item",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -44,
+        "has_js": "false"
+    },
+    {
+        "component": "safari-specific",
+        "category": "utilities",
+        "description": "",
+        "backgroundColor": "",
+        "order": -45,
+        "has_js": "false"
+    },
+    {
+        "component": "single-about",
+        "category": "templates",
+        "description": "",
+        "backgroundColor": "",
+        "order": -46,
+        "has_js": "false"
+    },
+    {
+        "component": "links",
+        "category": "atoms",
+        "description": "&lt;a&gt; tags",
+        "backgroundColor": "",
+        "order": -47,
+        "has_js": "false"
+    },
+    {
+        "component": "overview-blog",
+        "category": "templates",
+        "description": "",
+        "backgroundColor": "",
+        "order": -48,
+        "has_js": "false"
+    },
+    {
+        "component": "accordion",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -49,
+        "has_js": "false"
+    },
+    {
+        "component": "toggle",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -50,
+        "has_js": "false"
+    },
+    {
+        "component": "icon",
+        "category": "atoms",
+        "description": "This are the icons for the header",
+        "backgroundColor": "",
+        "order": -51,
+        "has_js": "false"
+    },
+    {
+        "component": "icon-text",
+        "category": "molecules",
+        "description": "This are the icons with the text on the right",
+        "backgroundColor": "",
+        "order": -53,
+        "has_js": "false"
+    },
+    {
+        "component": "headline-img",
+        "category": "molecules",
+        "description": "This is the headline of the website with the floating left image as background",
+        "backgroundColor": "",
+        "order": -54,
+        "has_js": "false"
+    },
+    {
+        "component": "all-icons",
+        "category": "organisms",
+        "description": "Here are all the icons with their description",
+        "backgroundColor": "",
+        "order": -55,
+        "has_js": "false"
+    },
+    {
+        "component": "landing-page",
+        "category": "templates",
+        "description": "Here is where all organisms will be united to create the landing page",
+        "backgroundColor": "",
+        "order": -56,
+        "has_js": "false"
+    }
+]

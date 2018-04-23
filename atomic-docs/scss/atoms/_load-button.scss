@@ -1,0 +1,53 @@
+/* scss/atoms/_load-button.scss */
+
+.elm-wrapper {
+	margin: 0.625rem auto;
+	text-align: center;
+}
+
+.elm-button {
+	-webkit-transition: all 0.15s ease;
+	transition: all 0.15s ease;
+}
+
+.elm-button.ajax-inactive {
+	display: none;
+}
+
+.elm-button.is-loading .elm-loading-anim {
+	display: block;
+}
+
+.elm-button.is-loading .elm-button-text {
+	display: none;
+}
+
+.elm-loading-anim {
+	display: none;
+}
+
+.elm-loading-icon {
+	//padding-top:0.9rem;
+	width: 1rem;
+	height: 1rem;
+	@media only screen and (min-width:$bp-sm) {
+		//padding-top:1.2rem;
+	}
+}
+
+
+//change color based on page
+.overview-work,
+.overview-about,
+.overview-clients {
+	.elm-loading-icon {
+		fill:$white;
+		color:$white;
+	}
+}
+.overview-blog {
+	.elm-loading-icon {
+		fill:$green;
+		color:$green;
+	}
+}

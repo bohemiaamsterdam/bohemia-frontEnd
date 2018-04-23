@@ -1,0 +1,67 @@
+/* scss/organisms/_accordion.scss */
+
+.block {
+  overflow: hidden;
+  > article {
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+
+    input {
+      + label {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        padding-right: 2.5rem;
+        border-bottom: 1px solid #eee;
+        @media only screen and (min-width: $bp-sm) {
+          padding-right: 4rem;
+        }
+
+        h2 {
+          margin-right: 0;
+          padding-right: 0;
+          margin-left: 0;
+        }
+
+        > img {
+          position: absolute;
+          right: 0.75rem;
+          top:53%;
+          width: 1rem;
+          @include transition(all,0.4s,ease);
+          @media only screen and (min-width: $bp-sm) {
+            right: 1.5rem;
+            width: 1rem;
+          }
+        }
+      }
+      ~ section {
+        visibility: hidden;
+        max-height: 0;
+        padding: 0;
+        opacity: 0;
+        -webkit-transition: all 0.5s ease-in-out 0.2s, opacity 0.25s ease-in-out 0.25s, padding 0s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0.2s, opacity 0.25s ease-in-out 0.25s, padding 0s ease-in-out 0s;
+        > p:first-child {
+          padding-top: 1.5rem;
+        }
+      }
+      &:checked {
+        + label {
+          > img {
+            @include transform(rotate(180deg));
+          }
+        }
+        ~ section {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+          max-height: 4000px;
+          -webkit-transition: all 0.5s ease-in-out 0.2s, opacity 0.25s ease-in-out 0.5s, padding 0s ease-in-out 0s;
+          transition: all 0.5s ease-in-out 0.2s, opacity 0.25s ease-in-out 0.5s, padding 0s ease-in-out 0s;
+        }
+      }
+    }
+  }
+}

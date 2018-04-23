@@ -1,0 +1,80 @@
+/* scss/utilities/_helper.scss */
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  &.focusable {
+    &:active, &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.translucent {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
+
+.clearfix {
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  *zoom: 1;
+}
+
+.blue {
+	color: $blue !important; }
+
+.red {
+	color: $red !important; }
+
+.green {
+	color: $green !important; }
+
+.white {
+	color: $white !important; }
+
+.blue-bg {
+	background: $blue !important; }
+
+.red-bg {
+	background: $red !important; }
+
+.green-bg {
+	background: $green !important; }
+
+.white-bg {
+	background: $white !important; }
+
+
+.full-width {
+	flex-basis: 100%;
+	max-width: 100%;
+}

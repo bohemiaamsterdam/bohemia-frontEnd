@@ -1,0 +1,13 @@
+/* scss/templates/_overview-clients.scss */
+
+.overview-clients main {
+	img {
+		width: 80%;
+		height: auto;
+	}
+	a:hover img {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+		  -khtml-opacity: 0.75;
+		  opacity: 0.75;
+	}
+}

@@ -1,0 +1,41 @@
+/* scss/organisms/_front-four.scss */
+
+.front-page .four {
+	margin-bottom: 4rem;
+
+	.bg-img {
+		z-index: -5;
+		width: 87vw;
+		top: -3rem;
+		opacity: .8;
+	}
+
+	/*
+	 *  Breakpoint: sm
+	 */
+	@media only screen and (min-width:$bp-sm) {
+		.bg-img {
+			width: 64vw;
+	    top: -12rem;
+	    left: -13rem;
+		}
+		.desc {
+			margin-left: -33.33333333%;
+			p {
+				background: transparent;
+			}
+		}
+	}
+
+	@media only screen and (min-width:$bp-xlg) {
+		.bg-img {
+			width: 54vw;
+		}
+	}
+
+	@media only screen and (min-width:$bp-xxlg) {
+		.bg-img {
+			width: 44vw;
+		}
+	}
+}

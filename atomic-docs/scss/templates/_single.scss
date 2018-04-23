@@ -1,0 +1,85 @@
+/* scss/templates/_single.scss */
+
+article {
+	margin-bottom: 3.75rem;
+}
+
+.content {
+	h2, h3, p, blockquote, ul, ol {
+		//padding-right: 0.3125rem;
+		//padding-left: 0.3125rem;
+	}
+	p {
+		margin-bottom:1.5rem;
+	}
+}
+
+@media only screen and (min-width: $bp-sm) {
+	.content {
+		h2, h3, p:not(.iframe-parent), blockquote, ul, ol, input, label {
+			padding-left: 0;
+			margin-right: 33.33333333%;
+		}
+		figure img, .iframe-parent {
+			width: 65%;
+		}
+	}
+}
+
+@media only screen and (min-width: $bp-md) {
+	.content {
+		h2, h3, p:not(.iframe-parent), ul, ol, input, label {
+			padding-right: 1rem;
+			margin-left: 8.33333333%;
+			margin-right: 33.33333333%;
+		}
+		blockquote {
+			padding-right: 1rem;
+			margin-left: 8.33333333%;
+			margin-right: 50%;
+		}
+	}
+}
+
+//Spacing between elements
+figure {
+	margin-top: 3.125rem;
+	margin-bottom: 3.125rem;
+}
+
+.meta {
+	margin-bottom: 2.5rem;
+}
+
+//Custom styles for the red/green pages
+
+//Red
+.single-work,
+.single-about {
+	button {
+		@extend .red-btn;
+	}
+	aside {
+		p {
+			color: $red;
+		}
+		svg {
+			fill: $red;
+		}
+	}
+}
+
+//Green
+.single-blog {
+	button {
+		@extend .green-btn;
+	}
+	aside {
+		p {
+			color: $green;
+		}
+		svg {
+			fill: $green;
+		}
+	}
+}
