@@ -7,14 +7,13 @@
 
 //General form styles
 
-.contact-form {
-	h3 {
-		@include fluid-type(font-size, 12.5rem, $bp-xxxlg, 2.6rem, 4rem);
-		@include fluid-type(padding-top, $bp-sm, $bp-lg, $h1-overview-pad-min, $h1-overview-pad-max);
-		@include fluid-type(padding-bottom, $bp-sm, $bp-lg, $h1-overview-pad-min, $h1-overview-pad-max);
-		//margin-bottom: 2.5rem;
-	}
-}
+// .contact-form {
+// 	h3{
+// 		font-weight: $regular;
+// 		font-size: $size4;
+// 		@include fluid-type(font-size, $bp-xs, $bp-xxlg, $size5, $size7);
+// 	}
+// }
 
 form, #mc_embed_signup {
 	text-align: left;
@@ -22,12 +21,12 @@ form, #mc_embed_signup {
 
 	input.button {
 		@extend button;
-		@extend .green-btn;	 //this needs to be different based on the type of page
+		@extend .red-gradient-btn;	 //this needs to be different based on the type of page
 	}
 
 	input[type=submit] {
 		@extend %input-submit;
-		@extend .green-btn;
+		@extend .red-gradient-btn;
 		width:100%;
 	}
 

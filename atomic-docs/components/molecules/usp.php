@@ -1,4 +1,4 @@
-<!-- components/molecules/icon-text.php -->
+<!-- components/molecules/usp.php -->
 
 <div class="icon-description">
   <img class="icon" src="img/icon.svg"></img>

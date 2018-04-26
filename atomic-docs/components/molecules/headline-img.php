@@ -7,3 +7,6 @@
     </div>
   </img>
 </div>
+<div class"description-text">
+  <h5>Wij zorgen ervoor dat jouw doelgroep jou vindt op het moment dat die jou nodig heeft. </h5>
+</div>

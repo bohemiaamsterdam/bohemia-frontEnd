@@ -208,14 +208,6 @@
         "has_js": "false"
     },
     {
-        "component": "tree",
-        "category": "atoms",
-        "description": "",
-        "backgroundColor": "",
-        "order": -27,
-        "has_js": "false"
-    },
-    {
         "component": "client",
         "category": "atoms",
         "description": "The client's name",
@@ -296,54 +288,6 @@
         "has_js": "false"
     },
     {
-        "component": "front-one",
-        "category": "organisms",
-        "description": "",
-        "backgroundColor": "",
-        "order": -36,
-        "has_js": "false"
-    },
-    {
-        "component": "front-two",
-        "category": "organisms",
-        "description": "",
-        "backgroundColor": "",
-        "order": -37,
-        "has_js": "false"
-    },
-    {
-        "component": "front-three",
-        "category": "organisms",
-        "description": "",
-        "backgroundColor": "",
-        "order": -38,
-        "has_js": "false"
-    },
-    {
-        "component": "front-four",
-        "category": "organisms",
-        "description": "",
-        "backgroundColor": "",
-        "order": -39,
-        "has_js": "false"
-    },
-    {
-        "component": "front-five",
-        "category": "organisms",
-        "description": "",
-        "backgroundColor": "",
-        "order": -40,
-        "has_js": "false"
-    },
-    {
-        "component": "front-zero",
-        "category": "organisms",
-        "description": "",
-        "backgroundColor": "",
-        "order": -41,
-        "has_js": "false"
-    },
-    {
         "component": "side-tags",
         "category": "organisms",
         "description": "The tags sidebar in the Home and Tag overview pages.",
@@ -416,15 +360,7 @@
         "has_js": "false"
     },
     {
-        "component": "icon",
-        "category": "atoms",
-        "description": "This are the icons for the header",
-        "backgroundColor": "",
-        "order": -51,
-        "has_js": "false"
-    },
-    {
-        "component": "icon-text",
+        "component": "usp",
         "category": "molecules",
         "description": "This are the icons with the text on the right",
         "backgroundColor": "",
@@ -448,11 +384,59 @@
         "has_js": "false"
     },
     {
-        "component": "landing-page",
-        "category": "templates",
-        "description": "Here is where all organisms will be united to create the landing page",
+        "component": "home-hashtags",
+        "category": "organisms",
+        "description": "Homepage hashtags section",
         "backgroundColor": "",
         "order": -56,
+        "has_js": "false"
+    },
+    {
+        "component": "home-sales-funnel",
+        "category": "organisms",
+        "description": "Homepage sales funnel section",
+        "backgroundColor": "",
+        "order": -57,
+        "has_js": "false"
+    },
+    {
+        "component": "home-case-studies",
+        "category": "organisms",
+        "description": "Homepage section for the case studies",
+        "backgroundColor": "",
+        "order": -58,
+        "has_js": "false"
+    },
+    {
+        "component": "home-logo-wall",
+        "category": "organisms",
+        "description": "Homepage section of clients logos",
+        "backgroundColor": "",
+        "order": -58,
+        "has_js": "false"
+    },
+    {
+        "component": "home-whitepapers",
+        "category": "organisms",
+        "description": "Homepage section for the whitepapers",
+        "backgroundColor": "",
+        "order": -59,
+        "has_js": "false"
+    },
+    {
+        "component": "home-contact-form",
+        "category": "organisms",
+        "description": "Homepage contact form section",
+        "backgroundColor": "",
+        "order": -60,
+        "has_js": "false"
+    },
+    {
+        "component": "home-testimonials",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -61,
         "has_js": "false"
     }
 ]

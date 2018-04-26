@@ -56,28 +56,17 @@ h4 {									//PADDING FIX - H4
 
 ///////////
 
+.title {
+	h1, h2, h3, h5, h6  {
+		font-family: $headline-font;
+		font-weight: $light;
 
-h1, h2, h3, h4, h5, h6, .title {
-	font-family: $headline-font;
-	font-weight: $light;
+		@media only screen and (min-width: $bp-md) {
+			font-weight: $thin;
+		}
 
-	@media only screen and (min-width: $bp-md) {
-		font-weight: $thin;
-	}
-
-}
-
-//-------------------------------THIS IS NEW----------------------------------//
-
-.icon-text{
-	h6{
-		font-size: $size11 !important;
-		line-height: 1.2;
-		text-align: left;
 	}
 }
-
-//-------------------------------HERE IT ENDS----------------------------------//
 
 // Remove gradient on IE
 body.ie {
@@ -151,7 +140,6 @@ body.ie {
 	hyphens: auto;
 }
 
-
 .single-blog,					//H2 in single posts
 .single-work,
 .single-about {
@@ -162,27 +150,11 @@ body.ie {
 	}
 }
 
-/*.overview-work, 					//H2 (post item) - overview pages
-.overview-blog,
-.overview-about {
-	.post-item h2 {
-		@include fluid-type(font-size, $bp-sm, $bp-xlg, $h2-overview-min, $h2-overview-max);
-	}
-}*/
-
 h3 {
 	font-weight: $thin;
 	font-size: 2.5rem;
 	line-height: $big-lh;
 }
-
-/*.single-blog,						//H3 (post item) - single posts
-.single-work,
-.single-about {
-	.post-item h3 {
-		@include fluid-type(font-size, $bp-md, $bp-xlg, $h2-overview-min, $h2-overview-max);
-	}
-}*/
 
 h4 {
 	font-size: $h4-single;

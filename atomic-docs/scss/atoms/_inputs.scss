@@ -13,15 +13,15 @@
 %textarea, %input {
 	font-family: $headline-font;
 	font-size: $body-size;
-	color: $green;
+	color: transparent;
 
 	width: 100%;
 
 	display: block;
 	box-sizing: border-box;
-	border-width: 1px;
-	border-style: solid;
-	border-color: $blue;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: $red;
 	//@include linear-gradient-border(45deg,$blue,$green);
 
 	outline: none;

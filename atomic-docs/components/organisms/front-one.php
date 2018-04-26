@@ -1,1 +1,0 @@
-<!-- components/organisms/front-one.php -->

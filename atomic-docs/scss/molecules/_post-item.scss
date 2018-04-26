@@ -5,8 +5,8 @@
 //
 .post-item {
 	display: block;
-	height: 34rem;
-	@include fluid-type(height, $bp-md, $bp-xxlg, 37rem, 43rem);
+	height: 43rem;
+	@include fluid-type(height, $bp-md, $bp-xxlg, 27rem, 37rem);
 	padding: 0;
 	margin: 0;
 	color: $white;
@@ -16,7 +16,7 @@
 	transition: all .3s ease-in-out;
 
 	@media only screen and (min-width: $bp-xxlg) {
-		height:46rem;
+		height:37rem;
 	}
 
 	&:hover {
@@ -38,7 +38,7 @@
 
 	.post-item-inner {
 		@include fluid-type(padding-left, $bp-md, $bp-xlg, 1rem, 3rem);
-		@include fluid-type(bottom, $bp-md, $bp-xlg, 2rem, 3rem);
+		@include fluid-type(bottom, $bp-sm, $bp-md, 2rem, 3rem);
 		position: absolute;
 		word-wrap: break-word;
 		width: 100%;
@@ -76,7 +76,7 @@
 
 		.tags, .quote {
 			margin-top:0;
-			@include fluid-type(margin-bottom, $bp-sm, $bp-xxlg, 1.25rem, 3.25rem);
+		//	@include fluid-type(margin-bottom, $bp-sm, $bp-xxlg, 1.25rem, 3.25rem);
 			ul {
 				margin-left:0;
 			}
@@ -205,7 +205,6 @@
 	}
 
 	.tags li {
-		color:$grey;
 		transition: all .3s ease-in-out;
 	}
 

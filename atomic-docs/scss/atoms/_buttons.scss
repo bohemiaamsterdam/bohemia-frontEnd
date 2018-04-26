@@ -97,4 +97,13 @@ button, a.red-btn, a.green-btn, a.outline-white, a.outline-green, a.red-gradient
 	color: $red;
 }
 
+.round-gradient-btn{
+	@include linear-gradient-img(90deg,$blue,$green);
+	color: $white;
+	width: 20%;
+    height: 0;
+    padding-bottom: 10%;
+    border-radius: 50%;
+}
+
 //Custom styles for red/green pages >>> single.scss

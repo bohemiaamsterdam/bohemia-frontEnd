@@ -1,0 +1,15 @@
+/* scss/organisms/_home-sales-funnel.scss */
+
+#sales-funnel { //Description of costumer journey section
+	p{
+    @include fluid-type(padding-top, $bp-xs, $bp-xxlg, $size3, $size6);
+    @include fluid-type(font-size, $size4, $bp-xxlg, $size2, $size4);
+		font:{
+			weight: $light;
+		}
+	}
+  img{
+    width:100%;
+  }
+
+}

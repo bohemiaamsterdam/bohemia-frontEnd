@@ -1,0 +1,34 @@
+/* scss/organisms/_home-case-studies.scss */
+#case-studies{ //Different text for posts and whitepapers
+      background-image: linear-gradient(45deg,$blue,$red);
+      mix-blend-mode: multiply;
+	h2{
+		color: $white;
+    margin-bottom: 10px!important;
+    line-height: 1.17;
+		font:{
+			family: $headline-font;
+			weight: $light;
+			size: $size14;
+		}
+	}
+	li{
+		color: $white;
+		font:{
+			family: $extra-font;
+			weight: $thin;
+			size: $size2;
+		}
+	}
+  ul{
+    opacity: 0.4;
+  }
+	.client{
+		color: $white;
+		font:{
+			family: $body-font;
+			weight: $bold;
+			size: $size2;
+		}
+	}
+}
