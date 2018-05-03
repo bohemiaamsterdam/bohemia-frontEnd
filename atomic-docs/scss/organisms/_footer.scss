@@ -1,15 +1,21 @@
 /* scss/organisms/_footer.scss */
 
-.clip-svg-footer {
-  -webkit-clip-path: url("#clip-polygon-footer");
-  clip-path: url("#clip-polygon-footer");
-}
+// .clip-svg-footer {
+//   -webkit-clip-path: url("#clip-polygon-footer");
+//   clip-path: url("#clip-polygon-footer");
+// }
 
 body > footer {
+  position: relative;
+  .skewed-bg {
+    background-color: white;
+    transform-origin: top left;
+    z-index: -1;
+  }
 
 	background: $white;
 	font-size: $footer-type;
-  @include fluid-type(margin-top, 24rem, $bp-xlg, -2.5rem, -16rem);
+  //@include fluid-type(margin-top, 24rem, $bp-xlg, -2.5rem, -16rem);
   padding-top: 5rem;
 
 	.container-fluid {
@@ -37,9 +43,6 @@ body > footer {
 			text-decoration:underline;
 		}
 		@media only screen and (min-width: $bp-md) {
-			.row {
-				padding-top: 8.75rem;
-			}
 		}
 
 	 }

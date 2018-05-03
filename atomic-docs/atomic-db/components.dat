@@ -438,5 +438,29 @@
         "backgroundColor": "",
         "order": -61,
         "has_js": "false"
+    },
+    {
+        "component": "slick-sliders",
+        "category": "organisms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -54,
+        "has_js": "false"
+    },
+    {
+        "component": "dropdown",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -55,
+        "has_js": "false"
+    },
+    {
+        "component": "skewed-bg",
+        "category": "atoms",
+        "description": "",
+        "backgroundColor": "",
+        "order": -56,
+        "has_js": "false"
     }
 ]

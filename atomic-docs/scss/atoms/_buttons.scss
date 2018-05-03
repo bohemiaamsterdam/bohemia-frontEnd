@@ -1,6 +1,6 @@
 /* scss/atoms/_buttons.scss */
 
-button, a.red-btn, a.green-btn, a.outline-white, a.outline-green, a.red-gradient-btn {
+button, a.red-btn, a.green-btn, a.white-btn, a.outline-white, a.outline-green, a.red-gradient-btn {
 	font-family: $headline-font;
 	font-style: medium;
 	font-weight: $bold;
@@ -94,7 +94,7 @@ button, a.red-btn, a.green-btn, a.outline-white, a.outline-green, a.red-gradient
 
 .white-btn{
 	background-color: $white;
-	color: $red;
+	color: $red !important;
 }
 
 .round-gradient-btn{

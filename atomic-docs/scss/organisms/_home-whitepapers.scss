@@ -2,4 +2,64 @@
 
 #whitepapers{
 
+  @include transition(all, 0.3s, ease);
+
+  .whitepaper-form {
+    display: none;
+  }
+
+  .form-active {
+    h3 {
+      font-size: $size4;
+			@include fluid-type(font-size, $bp-xs, $bp-xxxlg, $size4, $size6);
+      @include fluid-type(padding-bottom, $bp-xs, $bp-xxxlg, $size3, $size6);
+    }
+    .whitepaper-form {
+      display: block;
+    }
+    .whitepaper-button {
+      display: none;
+    }
+    .close {
+      display: block;
+    }
+  }
+  .post-item {
+    padding: 1rem;
+
+    .post-item-inner {
+      form {
+        * {
+          border-color: white;
+          color: white;
+        }
+        @media only screen and (max-width:$bp-lg) {
+          .wpcf7-list-item-label {
+            padding: 0.5rem 0;
+          }
+        }
+      }
+      @media only screen and (max-width:$bp-lg) {
+        input:not([type=submit]) {
+          height: 2rem;
+        }
+      }
+      input[type=submit] {
+        margin: 0.75rem 0 0;
+      }
+    }
+    img {
+      opacity: 1;
+    }
+  }
+
+  .close {
+    position: absolute;
+    z-index: 10;
+    top: 1.4rem;
+    right: 2rem;
+    cursor: pointer;
+    display: none;
+  }
+
 }

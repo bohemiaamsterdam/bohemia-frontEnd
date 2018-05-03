@@ -1,0 +1,187 @@
+/* scss/organisms/_slick-sliders.scss */
+
+$color_1: transparent;
+$color_2: white;
+
+.slick-prev {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	top: 30%;
+	z-index: 2;
+	display: block;
+	width: 20px;
+	height: auto;
+	padding: 0;
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	cursor: pointer;
+	color: $color_1;
+	border: none;
+	outline: none;
+	background: transparent;
+	left: 25px;
+	&:hover {
+		color: $color_1;
+		outline: none;
+		background: transparent;
+		&:before {
+			opacity: 1;
+		}
+	}
+	&:focus {
+		color: $color_1;
+		outline: none;
+		background: transparent;
+		&:before {
+			opacity: 1;
+		}
+	}
+	&:before {
+		opacity: .75;
+		color: $color_2;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: url('https://bohemiaamsterdam.com/nl/wp-content/themes/bohemia-amsterdam/img/arrow-prev.svg');
+	}
+}
+.slick-next {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	top: 30%;
+	z-index: 2;
+	display: block;
+	width: 20px;
+	height: auto;
+	padding: 0;
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	cursor: pointer;
+	color: $color_1;
+	border: none;
+	outline: none;
+	background: transparent;
+	right: 25px;
+	&:hover {
+		color: $color_1;
+		outline: none;
+		background: transparent;
+		&:before {
+			opacity: 1;
+		}
+	}
+	&:focus {
+		color: $color_1;
+		outline: none;
+		background: transparent;
+		&:before {
+			opacity: 1;
+		}
+	}
+	&:before {
+		opacity: .75;
+		color: $color_2;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		content: url('https://bohemiaamsterdam.com/nl/wp-content/themes/bohemia-amsterdam/img/arrow-next.svg');
+	}
+}
+.slick-prev.slick-disabled {
+	&:before {
+		opacity: .25;
+	}
+}
+.slick-next.slick-disabled {
+	&:before {
+		opacity: .25;
+	}
+}
+[dir='rtl'] {
+	.slick-prev {
+		right: 25px;
+		left: auto;
+		&:before {
+			content: url('https://bohemiaamsterdam.com/nl/wp-content/themes/bohemia-amsterdam/img/arrow-next.svg');
+		}
+	}
+	.slick-next {
+		right: auto;
+		left: 25px;
+		&:before {
+			content: url('https://bohemiaamsterdam.com/nl/wp-content/themes/bohemia-amsterdam/img/arrow-prev.svg');
+		}
+	}
+}
+.slick-dotted.slick-slider {
+	margin-bottom: 30px;
+}
+.slick-dots {
+	position: absolute;
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	li {
+		position: relative;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		margin: 0 5px;
+		padding: 0;
+		cursor: pointer;
+		button {
+			font-size: 0;
+			line-height: 0;
+			display: block;
+			width: 20px;
+			height: 20px;
+			padding: 5px;
+			margin: 0;
+			cursor: pointer;
+			color: $color_1;
+			border: 0;
+			outline: none;
+			background: transparent;
+			&:hover {
+				outline: none;
+				&:before {
+					opacity: 1;
+				}
+			}
+			&:focus {
+				outline: none;
+				&:before {
+					opacity: 1;
+				}
+			}
+			&:before {
+				font-size: 20px;
+				line-height: 20px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				content: '●';
+				text-align: center;
+				opacity: .25;
+				color: $color_2;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+		}
+	}
+	li.slick-active {
+		button {
+			&:before {
+				opacity: .75;
+				color: $color_2;
+			}
+		}
+	}
+}

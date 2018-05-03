@@ -6,8 +6,8 @@
 		overflow: visible;
 
 		section {
-			@include fluid-type(padding-top, $bp-xs, $bp-xxlg, $size8, $size9);
-			@include fluid-type(padding-bottom, $bp-xs, $bp-xxlg, $size7, $size9);
+			@include fluid-type(padding-top, $bp-xs, $bp-xxxlg, $size8, $size9);
+			@include fluid-type(padding-bottom, $bp-xs, $bp-xxxlg, $size7, $size9);
 		}
 
 		.floating-img-container {

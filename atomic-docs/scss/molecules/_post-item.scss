@@ -46,7 +46,6 @@
 		// Titles inside the post-items
 		h2, h3 {
 			// Size
-			@include fluid-type(font-size, 12.5rem, $bp-xxxlg, 2.6rem, 5rem);
 			line-height: $small-lh;
 
 			//Padding fix
@@ -54,24 +53,24 @@
 			@include fluid-type(padding-bottom, $bp-sm, $bp-lg, $h2-overview-pad-min, $h2-overview-pad-max);
 
 			//Hyphens for mobile
-			-ms-word-break: break-word;
-			word-break: break-word;
-			-webkit-hyphens: auto;
-			-moz-hyphens: auto;
-			-ms-hyphens: auto;
-			hyphens: auto;
-			@media only screen and (min-width:$bp-xxlg) {
-				-ms-word-break: normal;
-				word-break: normal;
-				-webkit-hyphens:none;
-				-moz-hyphens:none;
-				-ms-hyphens:none;
-				hyphens:none;
-			}
+			-moz-hyphens: none;
+			-ms-hyphens: none;
+			-webkit-hyphens: none;
+			hyphens: none; 
 
 			//Transition (hover)
 			@include transition(all,0.3s,ease);
 
+		}
+
+		h2 {
+			font-size: $size5;
+			@include fluid-type(font-size, $bp-xs, $bp-xxxlg, $size5, 5rem);
+		}
+
+		h3 {
+			font-size: $size5;
+			@include fluid-type(font-size, $bp-xs, $bp-xxxlg, $size5, $size6);
 		}
 
 		.tags, .quote {

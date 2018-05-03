@@ -1,7 +1,18 @@
 /* scss/organisms/_home-case-studies.scss */
 #case-studies{ //Different text for posts and whitepapers
-      background-image: linear-gradient(45deg,$blue,$red);
-      mix-blend-mode: multiply;
+  position: relative;
+  padding: {
+    top: 0;
+    bottom: 2rem;
+  }
+
+  .skewed-bg {
+    transform-origin: center center;
+    background-image: linear-gradient(45deg,$blue,$red);
+    z-index: -1;
+  }
+
+    //mix-blend-mode: multiply;
 	h2{
 		color: $white;
     margin-bottom: 10px!important;
@@ -9,7 +20,7 @@
 		font:{
 			family: $headline-font;
 			weight: $light;
-			size: $size14;
+			size: $size5;
 		}
 	}
 	li{
@@ -31,4 +42,28 @@
 			size: $size2;
 		}
 	}
+
+  //Show fewer case studies on mobile
+  .post-item {
+      display:none;
+  }
+  .post-item:nth-child(-n+2){
+      display:block;
+  }
+
+  @media only screen and (min-width:$bp-sm) {
+
+  }
+
+  @media only screen and (min-width:$bp-lg) {
+    .post-item:nth-child(-n+4){
+        display:block;
+    }
+  }
+
+  @media only screen and (min-width:$bp-xlg) {
+    .post-item {
+        display:block;
+    }
+  }
 }

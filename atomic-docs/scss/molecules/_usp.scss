@@ -17,7 +17,7 @@
       }
     }
     h6{
-      @include fluid-type(font-size, $size11, $bp-xxxlg, $size2, $size11);
+      @include fluid-type(font-size, $bp-xs, $bp-xxxlg, $size2, $size4);
   		line-height: 1.2;
   		text-align: left;
       @media only screen and (max-width: $bp-lg) {
