@@ -3,7 +3,7 @@
 
 #logo-wall{
 
-  @include fluid-type(padding-top, $bp-xs, $bp-xxxlg, $size5, $size9);
+  @include fluid-type(padding-top, $bp-xs, $bp-xxxlg, $size5, $size6);
   @include fluid-type(padding-bottom, $bp-xs, $bp-xxxlg, $size5, $size9);
 
   text-align: center;
