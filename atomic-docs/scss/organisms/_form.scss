@@ -90,7 +90,10 @@ form {
 			}
 		}
 	//}
-
+	div.wpcf7-spam-blocked {
+		border: 0;
+		font-size: 0.85rem;
+	}
 	div.wpcf7-response-output {
 		font-family:$headline-font;
 		font-weight:$bold;
