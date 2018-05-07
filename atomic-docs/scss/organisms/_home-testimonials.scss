@@ -14,10 +14,11 @@
   p {
   	color: $white;
     @include fluid-type(font-size, $bp-xs, $bp-xxlg, $size3, $size7);
+    font-weight: $light;
   }
   span {
   	color: $white;
-    font-weight: 700;
+    font-weight: $bold;
     @include fluid-type(font-size, $bp-xs, $bp-xxlg, $size3, $size4);
     @include fluid-type(padding-top, $bp-xs, $bp-xxlg, $size4, $size6);
     @include fluid-type(padding-bottom, $bp-xs, $bp-xxlg, $size4, $size6);

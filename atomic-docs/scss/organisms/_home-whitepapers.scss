@@ -11,8 +11,8 @@
   .form-active {
     h3 {
       font-size: $size4;
-			@include fluid-type(font-size, $bp-xs, $bp-xxxlg, $size4, $size6);
-      @include fluid-type(padding-bottom, $bp-xs, $bp-xxxlg, $size3, $size6);
+			@include fluid-type(font-size, $bp-xs, $bp-xxxlg, $size4, $size5);
+      @include fluid-type(padding-bottom, $bp-xs, $bp-xxxlg, $size3, $size5);
     }
     .whitepaper-form {
       display: block;

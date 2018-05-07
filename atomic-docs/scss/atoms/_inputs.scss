@@ -12,7 +12,8 @@
 }
 %textarea, %input {
 	font-family: $headline-font;
-	font-size: $body-size;
+	//font-size: $body-size;
+	@include fluid-type(font-size, $bp-xs, $bp-xlg, $size2, $size3);
 	font-weight: 400;
 	color: transparent;
 

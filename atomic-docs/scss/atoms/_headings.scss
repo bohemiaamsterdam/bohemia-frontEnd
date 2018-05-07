@@ -1,5 +1,13 @@
 /* scss/atoms/_headings.scss */
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: $light;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
 //setting paddings for all headings - this will fix the clipping issue coming from the gradient
 
 .single-blog .title, 					//PADDING FIX - H1/title - single posts
@@ -22,12 +30,6 @@
 
 		@include fluid-type(font-size, $bp-sm, $bp-xlg, $h1-overview-min, $h1-overview-max);
 		//mix-blend-mode:multiply;
-		-ms-word-break: break-word;
-		word-break: break-word;
-		-webkit-hyphens: auto;
-		-moz-hyphens: auto;
-		-ms-hyphens: auto;
-		hyphens: auto;
 	}
 }
 
@@ -35,12 +37,6 @@ h2 {									//PADDING FIX - H2
 	@include fluid-type(padding-top, $bp-sm, $bp-lg, $h2-overview-pad-min, $h2-overview-pad-max);
 	@include fluid-type(padding-bottom, $bp-sm, $bp-lg, $h2-overview-pad-min, $h2-overview-pad-max);
 	line-height: $small-lh;
-	-ms-word-break: break-word;
-	word-break: break-word;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
 }
 
 h3 {									//PADDING FIX - H3
@@ -57,15 +53,7 @@ h4 {									//PADDING FIX - H4
 ///////////
 
 .title {
-	h1, h2, h3, h5, h6  {
-		font-family: $headline-font;
-		font-weight: $light;
-
-		@media only screen and (min-width: $bp-md) {
-			font-weight: $thin;
-		}
-
-	}
+	font-weight: $light;
 }
 
 // Remove gradient on IE
@@ -134,10 +122,6 @@ body.ie {
 .single-work h1,
 .single-about h1 {
 	@include fluid-type(font-size, 12.5rem, $bp-xxxlg, 3.5rem, 6rem);
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
-	hyphens: auto;
 }
 
 .single-blog,					//H2 in single posts
