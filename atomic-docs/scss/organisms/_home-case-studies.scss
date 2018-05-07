@@ -51,14 +51,14 @@
       display:block;
   }
 
-  @media only screen and (min-width:$bp-sm) {
-
-  }
-
-  @media only screen and (min-width:$bp-lg) {
+  @media only screen and (min-width:$bp-md) {
     .post-item:nth-child(-n+4){
         display:block;
     }
+  }
+
+  @media only screen and (min-width:$bp-lg) {
+
   }
 
   @media only screen and (min-width:$bp-xlg) {

@@ -28,14 +28,14 @@
 		.bg-img-hashtags {
 			right: 0;
 			z-index: -7;
-			@include fluid-type(top, $bp-xs, $bp-xxlg, -$size9, -$size9);
-			@include fluid-type(width, $bp-xs, $bp-xxlg, 75%, 100%);
+			top: -$size8;
+			@include fluid-type(width, $bp-xs, $bp-xxlg, 50%, 75%);
 		}
 
 		.bg-img-work {
 			left: 0;
 			z-index: -7;
-			@include fluid-type(top, $bp-xs, $bp-xxlg, -$size9, -$size9);
+			top: -$size9;
 			@include fluid-type(width, $bp-xs, $bp-xxlg, 45%, 80%);
 			opacity: 0.4;
 		}

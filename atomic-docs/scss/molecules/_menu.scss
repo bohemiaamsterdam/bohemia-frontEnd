@@ -112,6 +112,7 @@
 				margin-top: 0;
 			}
 			&:last-of-type a {
+				display: none;
 				color:$red;
 				&:hover {
 					color:$blue;
