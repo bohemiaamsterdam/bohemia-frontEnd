@@ -96,7 +96,7 @@
 			a, a:visited  {
 				@include fluid-type(font-size, $bp-sm, $bp-lg, $menu-type-min, $menu-type-max);
 				font-family: $headline-font;
-				font-weight: 100;
+				font-weight: $thin;
 				color: $green;
 				text-decoration: none;
 				text-transform: lowercase;

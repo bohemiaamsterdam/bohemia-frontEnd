@@ -7,12 +7,15 @@
   .whitepaper-form {
     display: none;
   }
+  .whitepaper-button {
+    margin-bottom:0;
+  }
 
   .form-active {
     h3 {
       font-size: $size4;
 			@include fluid-type(font-size, $bp-xs, $bp-xxxlg, $size4, $size5);
-      @include fluid-type(padding-bottom, $bp-xs, $bp-xxxlg, $size3, $size5);
+      @include fluid-type(padding-bottom, $bp-xs, $bp-xxxlg, $size3, $size4);
     }
     .whitepaper-form {
       display: block;
@@ -37,10 +40,6 @@
 
     .post-item-inner {
       form {
-        * {
-          border-color: white;
-          color: white;
-        }
         @media only screen and (max-width:$bp-lg) {
           .wpcf7-list-item-label {
             padding: 0.5rem 0;
@@ -67,6 +66,10 @@
     right: 2rem;
     cursor: pointer;
     display: none;
+  }
+
+  #cf7md-form.cf7md-form + .wpcf7-response-output {
+    font-size: 1rem;
   }
 
 }

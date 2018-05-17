@@ -29,11 +29,11 @@
 
 	// Family
 	//$headline-font: "brandon-grotesque", Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	$body-font: 'Work Sans', Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	$body-font: 'Alegreya', Times, "Times New Roman", serif;
 	$headline-font: 'Work Sans', Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 	//$body-font: "livory", Times, "Times New Roman", serif;
-	$extra-font: 'Alegreya', Times, "Times New Roman", serif;
+	//$extra-font: 'Alegreya', Times, "Times New Roman", serif;
 
 //
 
@@ -41,7 +41,7 @@
 	$thin: 100;
 	$light: 200;
 	$regular: 300;
-	$bold: 700;
+	$bold: 600;
 
 	// Line-heights
 	$big-lh: 1;					  //
@@ -80,8 +80,8 @@
 		$h2-single-max:			$size7;
 
 		//post-item-title
-		$h1-overview-min:		$size8;
-		$h1-overview-max:		$size9;
+		$h1-overview-min:		$size7;
+		$h1-overview-max:		$size8;
 
 		//post-item-title
 		$h2-overview-min:		$size2;

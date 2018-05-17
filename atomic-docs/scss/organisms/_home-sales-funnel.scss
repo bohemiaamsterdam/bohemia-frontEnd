@@ -4,9 +4,8 @@
 	p{
     @include fluid-type(padding-top, $bp-xs, $bp-xxlg, $size3, $size6);
     @include fluid-type(font-size, $size4, $bp-xxlg, $size2, $size4);
-		font:{
-			weight: $light;
-		}
+		font-weight: $regular;
+		font-family: $headline-font;
 	}
   img{
     width:100%;

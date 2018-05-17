@@ -11,12 +11,15 @@
 	}
 
 	h4 {
-		color: $white;
+
+		& > a {
+			color: $white;
+		}
 		text-align:center;
 		@include fluid-type(font-size, $bp-xs, $bp-lg, $size2, $size4);
 		font:{
-			family:$extra-font;
-			weight: $thin;
+			family:$body-font;
+			font-weight: $regular;
 		}
 		@media only screen and (max-width:$bp-md) {
 			line-height: 1.6;

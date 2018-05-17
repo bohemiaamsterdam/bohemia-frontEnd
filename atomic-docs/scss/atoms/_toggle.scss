@@ -1,158 +1,335 @@
+@charset "UTF-8";
+/*
+* CSS TOGGLE SWITCH
+*
+* Ionuț Colceriu - ghinda.net
+* https://github.com/ghinda/css-toggle-switch
+*
+*/
+/* supported values are px, rem-calc, em-calc
+ */
+/* imports
+ */
+/* Functions
+ */
+/* Shared
+ */
+/* Hide by default
+ */
+.switch-toggle a,
+.switch-light span span {
+  display: none; }
 
-$color-bg: #fff; //background for the demo
+/* We can't test for a specific feature,
+ * so we only target browsers with support for media queries.
+ */
+@media only screen {
+  /* Checkbox
+ */
+  .switch-light {
+    position: relative;
+    display: block;
+    /* simulate default browser focus outlines on the switch,
+   * when the inputs are focused.
+   */ }
+    .switch-light::after {
+      clear: both;
+      content: '';
+      display: table; }
+    .switch-light *,
+    .switch-light *:before,
+    .switch-light *:after {
+      box-sizing: border-box; }
+    .switch-light a {
+      display: block;
+      transition: all 0.2s ease-out; }
+    .switch-light label,
+    .switch-light > span {
+      /* breathing room for bootstrap/foundation classes.
+     */
+      line-height: 2em; }
+    .switch-light input:focus ~ span a,
+    .switch-light input:focus + label {
+      outline: 0;
+      /* Chrome/Opera gets its native focus styles.
+     */ } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 0) {
+      .switch-light input:focus ~ span a,
+      .switch-light input:focus + label {
+        outline: 0; } }
 
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
+@media only screen {
+  /* don't hide the input from screen-readers and keyboard access
+ */
+  .switch-light input {
+    position: absolute;
+    opacity: 0;
+    z-index: 3; }
+  .switch-light input:checked ~ span a {
+    right: 0%; }
+  /* inherit from label
+ */
+  .switch-light strong {
+    font-weight: inherit; }
+  .switch-light > span {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    min-height: 2em;
+    /* overwrite 3rd party classes padding
+   * eg. bootstrap .alert
+   */
+    padding: 0;
+    text-align: left; }
+  .switch-light span span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    float: left;
+    width: 50%;
+    text-align: center;
+    user-select: none; }
+  .switch-light a {
+    position: absolute;
+    right: 50%;
+    top: 0;
+    z-index: 1;
+    display: block;
+    width: 50%;
+    height: 100%;
+    padding: 0; }
+  /* bootstrap 4 tweaks
+*/
+  .switch-light.row {
+    display: flex; }
+  .switch-light .alert-light {
+    color: #333; }
+  /* Radio Switch
+ */
+  .switch-toggle {
+    position: relative;
+    display: block;
+    /* simulate default browser focus outlines on the switch,
+   * when the inputs are focused.
+   */
+    /* For callout panels in foundation
+  */
+    padding: 0 !important;
+    /* 2 items
+   */
+    /* 3 items
+   */
+    /* 4 items
+   */
+    /* 5 items
+   */
+    /* 6 items
+   */ }
+    .switch-toggle::after {
+      clear: both;
+      content: '';
+      display: table; }
+    .switch-toggle *,
+    .switch-toggle *:before,
+    .switch-toggle *:after {
+      box-sizing: border-box; }
+    .switch-toggle a {
+      display: block;
+      transition: all 0.2s ease-out; }
+    .switch-toggle label,
+    .switch-toggle > span {
+      /* breathing room for bootstrap/foundation classes.
+     */
+      line-height: 2em; }
+    .switch-toggle input:focus ~ span a,
+    .switch-toggle input:focus + label {
+      outline: 0;
+      /* Chrome/Opera gets its native focus styles.
+     */ } }
+    @media only screen and (-webkit-min-device-pixel-ratio: 0) {
+      .switch-toggle input:focus ~ span a,
+      .switch-toggle input:focus + label {
+        outline: 0; } }
 
-
-/* =====================================================
-   Some defaults across all toggle demos
-   ===================================================== */
-
-.toggle {
-	display: block;
-	text-align: left;
-	margin-top: 40px;
-  user-select: none;
-}
-	.toggle--checkbox {
-    display: none;
-	}
-	.toggle--btn {
-		float:left;
-
-		font-size: 1.4em;
-
-		transition: all 350ms ease-in;
-
-		&:hover {
-			cursor: pointer;
-		}
-	}
-
-	.toggle--btn,
-	.toggle--checkbox,
-	.toggle--feature {
-		&,
-		&:before,
-		&:after {
-			transition: all 250ms ease-in;
-		}
-		&:before,
-		&:after {
-			content: '';
-			display: block;
-		}
-	}
-
-	/* ==================================================
-	   Like specific styling
-	   ================================================== */
-
-  $toggleHeight: 70px; //70
-	$toggleWidth: 125px; //125
-	$borderWidth: 5px; // 5
-	$toggleBtnRadius: $toggleHeight - 14px;
-
-  $bgColor--sad:  #e25d5d;
-	$borderColor--sad: #e25d5d;
-  $toggleBtnRadius: $toggleHeight - 14px;
-
-	$bgColor--happy: #3498db;
-	$borderColor--happy: #3498db;
-
-	$emojiWidth: 36px;
-	$emojiBgColor: #f2dd68;
-	$emojiBorderColor: #f2dd68;
-	$emojiColor: #995710;
-	$emojiColorAlt: #d8aa2b;
-
-	$toggleFeaturePosition--sad: ($toggleBtnRadius/2) - 14;
-	$toggleFeaturePosition--happy: 53px;
-
-	.toggle--like {
-		position: relative;
-
-		.toggle--btn {
-      position: relative;
-			height: $toggleHeight;
-			width: $toggleWidth;
-			border-radius: $toggleHeight;
-			border: $borderWidth solid $borderColor--sad;
-			background-color: $bgColor--sad;
-
-			//toggle button
-			&:before {
-				background-color: $emojiBgColor;
-				border: $borderWidth solid $emojiBorderColor;
-				position: absolute;
-				top: 2px;
-				left: 4px;
-				width: $toggleBtnRadius;
-				height: $toggleBtnRadius;
-				border-radius: 50%;
-			}
-		}
-
-		.toggle--feature {
+@media only screen {
+	.switch-toggle {
+		input {
 			position: absolute;
-			left: 14px;
-			top: 32%;
-			width: 7px;
-			height: 7px;
-			border-radius: 50%;
-			background-color: $emojiColor;
-			box-shadow: ($emojiWidth - 8) 0 0 0 $emojiColor;
-
-			&:before {
-				position: absolute;
-				left: 0;
-				top: 11px;
-				width: $emojiWidth;
-				height: 17px;
-				background-color: $emojiColor;
-
-				border-radius: $emojiWidth $emojiWidth 0 0;
+			left: 0;
+			opacity: 0;
+			+ label {
+				position: relative;
+				z-index: 2;
+				display: block;
+				float: left;
+				padding: 0 0.5em;
+				margin: 0;
+				text-align: center;
 			}
-			&:after {
-				position: absolute;
-				left: 9px;
-				top: 21px;
-				width: 17px;
-				height: 7px;
-				background-color: $emojiColorAlt;
-
-				border-radius: 17px 17px 0 0;
-			}
-
 		}
-
-		//what happens once checkbox is checked
-		.toggle--checkbox:checked {
-			 & + .toggle--btn {
-				background-color: $bgColor--happy;
-				border: $borderWidth solid $borderColor--happy;
-
-				//toggle button
-				&:before {
-					transform: translate($toggleWidth - ($toggleBtnRadius) - ($borderWidth * 2) - 8px, 0);
-				}
-
-				& .toggle--feature {
-					transform: translate($toggleFeaturePosition--happy, 0);
-
-					&:before {
-						border-radius: 0 0 $emojiWidth $emojiWidth;
-						top: 11px;
+		a {
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 0;
+			z-index: 1;
+			width: 10px;
+			height: 100%;
+		}
+		label:nth-child(2) {
+			&:nth-last-child(4) {
+				width: 50%;
+				~ {
+					label, a {
+						width: 50%;
 					}
-					&:after {
-						top: 21px;
-						border-radius: 50%/50%;
+					input:checked:nth-child(3) + label ~ a {
+						left: 50%;
 					}
 				}
 			}
+			&:nth-last-child(6) {
+				width: 33.33%;
+				~ {
+					label, a {
+						width: 33.33%;
+					}
+					input:checked {
+						&:nth-child(3) + label ~ a {
+							left: 33.33%;
+						}
+						&:nth-child(5) + label ~ a {
+							left: 66.66%;
+						}
+					}
+				}
+			}
+			&:nth-last-child(8) {
+				width: 25%;
+				~ {
+					label, a {
+						width: 25%;
+					}
+					input:checked {
+						&:nth-child(3) + label ~ a {
+							left: 25%;
+						}
+						&:nth-child(5) + label ~ a {
+							left: 50%;
+						}
+						&:nth-child(7) + label ~ a {
+							left: 75%;
+						}
+					}
+				}
+			}
+			&:nth-last-child(10) {
+				width: 20%;
+				~ {
+					label, a {
+						width: 20%;
+					}
+					input:checked {
+						&:nth-child(3) + label ~ a {
+							left: 20%;
+						}
+						&:nth-child(5) + label ~ a {
+							left: 40%;
+						}
+						&:nth-child(7) + label ~ a {
+							left: 60%;
+						}
+						&:nth-child(9) + label ~ a {
+							left: 80%;
+						}
+					}
+				}
+			}
+			&:nth-last-child(12) {
+				width: 16.6%;
+				~ {
+					label, a {
+						width: 16.6%;
+					}
+					input:checked {
+						&:nth-child(3) + label ~ a {
+							left: 16.6%;
+						}
+						&:nth-child(5) + label ~ a {
+							left: 33.2%;
+						}
+						&:nth-child(7) + label ~ a {
+							left: 49.8%;
+						}
+						&:nth-child(9) + label ~ a {
+							left: 66.4%;
+						}
+						&:nth-child(11) + label ~ a {
+							left: 83%;
+						}
+					}
+				}
+			}
 		}
-}
+	}
+
+  /* Holo Theme
+ */
+ .switch-toggle.switch-holo, .switch-light.switch-holo > span, .switch-toggle.switch-holo, .switch-light.switch-holo > span {
+   background-color: transarent;
+   border-radius: 1px;
+   border: 2px solid $green;
+   color: #fff;
+ }
+
+ .switch-holo {
+   label {
+     color: $green;
+   }
+   input:checked + label {
+     color: #fff;
+		 font-weight: $bold !important;
+   }
+   > span span {
+     opacity: 0;
+     transition: all 0.1s;
+     &:first-of-type {
+       opacity: 1;
+     }
+     cursor: pointer;
+     line-height: 2.15625em;
+   }
+   label {
+     cursor: pointer;
+     line-height: 2.15625em;
+   }
+   a {
+     background-color: $green;
+   }
+ }
+
+  /* Selected ON switch-light
+*/
+  .switch-holo.switch-light input:checked ~ span a {
+    background-color: #0E88B1; }
+  .switch-holo.switch-light input:checked ~ span span:first-of-type {
+    opacity: 0; }
+  .switch-holo.switch-light input:checked ~ span span:last-of-type {
+    opacity: 1; }
+ }
+
+/* Bugfix for older Webkit, including mobile Webkit. Adapted from
+ * http://css-tricks.com/webkit-sibling-bug/
+ */
+@media only screen and (-webkit-max-device-pixel-ratio: 2) and (max-device-width: 80em) {
+  .switch-light,
+  .switch-toggle {
+    -webkit-animation: webkitSiblingBugfix infinite 1s; } }
+
+@-webkit-keyframes webkitSiblingBugfix {
+  from {
+    -webkit-transform: translate3d(0, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0); } }
+
+/*# sourceMappingURL=toggle-switch.css.map */

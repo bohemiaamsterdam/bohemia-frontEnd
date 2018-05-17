@@ -15,10 +15,12 @@
   	color: $white;
     @include fluid-type(font-size, $bp-xs, $bp-xxlg, $size3, $size7);
     font-weight: $light;
+    font-family: $headline-font;
   }
   span {
   	color: $white;
     font-weight: $bold;
+    font-family: $headline-font;
     @include fluid-type(font-size, $bp-xs, $bp-xxlg, $size3, $size4);
     @include fluid-type(padding-top, $bp-xs, $bp-xxlg, $size4, $size6);
     @include fluid-type(padding-bottom, $bp-xs, $bp-xxlg, $size4, $size6);

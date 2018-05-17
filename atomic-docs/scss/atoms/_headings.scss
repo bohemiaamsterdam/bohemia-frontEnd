@@ -1,11 +1,19 @@
 /* scss/atoms/_headings.scss */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .single-blog .title {
 	font-weight: $light;
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
+	font-family: $headline-font;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+
+	@media only screen and (min-width: $bp-sm) {
+		-webkit-hyphens: none;
+		-moz-hyphens: none;
+		-ms-hyphens: none;
+		hyphens: none;
+	}
 }
 
 //setting paddings for all headings - this will fix the clipping issue coming from the gradient
