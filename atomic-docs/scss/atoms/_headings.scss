@@ -18,19 +18,19 @@ h1, h2, h3, h4, h5, h6, .single-blog .title {
 
 //setting paddings for all headings - this will fix the clipping issue coming from the gradient
 
-.single-blog .title, 					//PADDING FIX - H1/title - single posts
-.single-work h1,
-.single-about h1 {
+.single-blog main .title, 					//PADDING FIX - H1/title - single posts
+.single-work main h1,
+.single-about main h1 {
 	margin-top: 2.5rem;
 	@include fluid-type(padding-top, $bp-sm, $bp-lg, $h1-single-pad-min, $h1-single-pad-max);
 	@include fluid-type(padding-bottom, $bp-sm, $bp-lg, $h1-single-pad-min, $h1-single-pad-max);
 	line-height: $small-lh;
 }
 
-.overview-work, 						//PADDING FIX - H1 - overview pages
-.overview-blog,
-.overview-about,
-.overview-clients{
+.overview-work .hero, 						//PADDING FIX - H1 - overview pages
+.overview-blog .hero,
+.overview-about .hero,
+.overview-clients .hero{
 	h1 {
 		@include fluid-type(padding-top, $bp-sm, $bp-lg, $h1-overview-pad-min, $h1-overview-pad-max);
 		@include fluid-type(padding-bottom, $bp-sm, $bp-lg, $h1-overview-pad-min, $h1-overview-pad-max);
@@ -66,15 +66,16 @@ h4 {									//PADDING FIX - H4
 
 // Remove gradient on IE
 body.ie {
-	&.single-blog,
-	&.overview-blog {
+	&.single-blog main,
+	&.overview-blog main,
+	&.overview-blog .hero {
 		h1, h2, h3, h4, h5, h6, .title {
 			background:none;
 			color:$green;
 		}
 	}
-	&.single-work,
-	&.single-about {
+	&.single-work main,
+	&.single-about main {
 		h1, h2, h3, h4, h5, h6, .title {
 			background:none;
 			color:$red;
@@ -85,9 +86,9 @@ body.ie {
 			}
 		}
 	}
-	&.overview-work,
-	&.overview-about,
-	&.overview-clients  {
+	&.overview-work main,
+	&.overview-about main,
+	&.overview-clients main  {
 		&>.hero {
 			h1, h2, h3, h4, h5, h6, .title {
 				background:none;
@@ -97,18 +98,18 @@ body.ie {
 	}
 }
 
-.single-blog,
-.overview-blog {								// blue-green gradient - Headlines
+.single-blog main,
+.overview-blog .hero {								// blue-green gradient - Headlines
 	h1, h2, h3, h4, h5, h6, .title {
 		@include linear-gradient-text(45deg,$blue,$green);
 	}
 }
 
-.single-work,
-.single-about,
-.overview-work,
-.overview-about,
-.overview-clients  {							// blue-red gradient - Headlines
+.single-work main,
+.single-about main,
+.overview-work .hero,
+.overview-about .hero,
+.overview-clients .hero {							// blue-red gradient - Headlines
 	h1, h2, h3, h4, h5, h6, .title {
 		@include linear-gradient-text(45deg,$blue,$red);
 	}
@@ -116,7 +117,7 @@ body.ie {
 
 
 
-.single-blog h1 { 					//the small SEO in single-blog
+.single-blog main h1 { 					//the small SEO in single-blog
 	font-weight: $bold;
 	font-size: $body-size;
 	line-height: $intro-lh;
@@ -126,15 +127,15 @@ body.ie {
 	display: inline-block;
 }
 
-.single-blog .title, 				//H1 in single-work and single-about, and the Title in the single-blog
-.single-work h1,
-.single-about h1 {
+.single-blog main .title, 				//H1 in single-work and single-about, and the Title in the single-blog
+.single-work main h1,
+.single-about main h1 {
 	@include fluid-type(font-size, 12.5rem, $bp-xxxlg, 3.5rem, 6rem);
 }
 
-.single-blog,					//H2 in single posts
-.single-work,
-.single-about {
+.single-blog main,					//H2 in single posts
+.single-work main,
+.single-about main {
 	h2 {
 		@include fluid-type(font-size, 12.5rem, $bp-xxxlg, 3rem, 5rem);
 		padding-top: $h2-pad;

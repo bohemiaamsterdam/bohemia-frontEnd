@@ -54,8 +54,8 @@ figure {
 //Custom styles for the red/green pages
 
 //Red
-.single-work,
-.single-about {
+.single-work main,
+.single-about main, {
 	button {
 		@extend .red-btn;
 	}
@@ -70,7 +70,7 @@ figure {
 }
 
 //Green
-.single-blog {
+.single-blog main, {
 	button {
 		@extend .green-btn;
 	}
